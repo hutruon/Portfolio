@@ -1,4 +1,6 @@
-<!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
+<script>
+	import ProjectCard from "../lib/components/ProjectCard.svelte";
+</script>
 
 <div class="container h-full mx-auto flex justify-center items-center">
 	<div class="space-y-5">
@@ -12,4 +14,6 @@
 			</li>
 		</ul>
 	</div>
+
+	<ProjectCard projectTitle={"yellow"} descriptionSummary={"great Project"} description={"lorum ipsum"} projectOwner={"max zinzi"}/>
 </div>
