@@ -1,19 +1,19 @@
 <script>
 	import ProjectCard from "../lib/components/ProjectCard.svelte";
+	import image from "$lib/images/Close-up-shot-of-female-feet-isolated-on-transparent-background-PNG.png";
+	let yellow = ["bang", "bang", "bang", "bang", "bang", "bang"];
 </script>
 
 <div class="container h-full mx-auto flex justify-center items-center">
-	<div class="space-y-5">
-		<h1 class="h1">Let's get cracking bones!</h1>
-		<p>Start by exploring:</p>
-		<ul>
-			<li><code class="code">/src/routes/+layout.svelte</code> - barebones layout</li>
-			<li><code class="code">/src/app.postcss</code> - app wide css</li>
-			<li>
-				<code class="code">/src/routes/+page.svelte</code> - this page, you can replace the contents
-			</li>
-		</ul>
+	<div class="grid grid-cols-3">
+		{#each yellow as id}
+			<ProjectCard 
+				imgSrc={image} 
+				projectTitle={id} 
+				descriptionSummary={"great Project"} 
+				description={"lorum ipsum"} 
+				projectOwner={"max zinzi"}
+			/>
+		{/each}
 	</div>
-
-	<ProjectCard projectTitle={"yellow"} descriptionSummary={"great Project"} description={"lorum ipsum"} projectOwner={"max zinzi"}/>
 </div>
